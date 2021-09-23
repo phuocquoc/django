@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {%load static%}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+        <title>Home</title>
+        <link rel="stylesheet" href = "{% static 'home/style.css'%}">
+    </head>
+    <body>
+        <h1>This Is Home</h1>
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'home:home' %}">Home</a></li>
+                <li><a href="{% url 'polls:polls' %}">Poll</a></li>
+                <li><a href="{% url 'contract:contract' %}">Contract</a></li>
+            </ul>
+        </div>
+        <div class ="content">
+            {%block content %}
+            {%endblock%}
+        </div>
+    </body>
+</html>
